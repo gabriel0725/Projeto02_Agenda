@@ -17,8 +17,10 @@ function adicionaLinha(){
     const inputNumeroContato = document.getElementById('Numero')
     
 
-    if (nomesContatos.includes(inputNomeContato.value) && numerosContatos.includes(inputNumeroContato.value)){
-        alert(`O contato: ${inputNomeContato.value} ${inputNumeroContato.value} já está na agenda`)
+    if (nomesContatos.includes(inputNomeContato.value)){
+        alert(`O contato: ${inputNomeContato.value} já está na agenda`);
+    }else if (numerosContatos.includes(inputNumeroContato.value)){
+        alert(`O numero: ${inputNumeroContato.value} já está na agenda`);
     }else{
         nomesContatos.push(inputNomeContato.value);
         numerosContatos.push(inputNumeroContato.value);
